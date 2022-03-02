@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mViewTop"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest rate calculator"
+            android:layout_marginLeft="5dp"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="The total loan amount:"/>
+
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mEtAmt"
+            android:text=""
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="130dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Rate（%）:"/>
+
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mEtRate"
+            android:text=""
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="210dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Loan term（Month）:"/>
+
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mEtDate"
+            android:text=""
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RadioGroup android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mRadioGroup"
+        android:orientation="horizontal"
+        android:layout_marginTop="270dp"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <RadioButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mRadioButton1"
+            android:checked="true"
+            android:text="Equal principal and interest"/>
+
+        <RadioButton android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mRadioButton2"
+            android:text="Equal principal"
+            android:layout_marginLeft="40dp"/>
+
+    </RadioGroup>
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mBtnSure"
+        android:text="calculator"
+        android:layout_marginTop="330dp"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop"/>
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mBtnNext"
+        android:text="show result"
+        android:layout_marginTop="380dp"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop"/>
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mTvResult"
+        android:text="result："
+        android:layout_marginTop="440dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/mViewTop"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
